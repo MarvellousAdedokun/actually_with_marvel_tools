@@ -14,4 +14,7 @@ def load_data(csv_path):
     return df
 
 def posting_frequency(df):
-    
+    """
+    How many posts per week/month — is posting consistent or sporadic?
+    """
+    df.groupby()(pd.)
