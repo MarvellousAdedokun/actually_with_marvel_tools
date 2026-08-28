@@ -17,4 +17,9 @@ def posting_frequency(df):
     """
     How many posts per week/month — is posting consistent or sporadic?
     """
-    df.groupby()(pd.)
+    post_per_week = df.groupby(pd.Grouper(key="date", freq="W")).size()
+    post_per_month = df.groupby(pd.Grouper(key="date", freq="M")).size()
+
+    return post_per_month, post_per_week
+
+
