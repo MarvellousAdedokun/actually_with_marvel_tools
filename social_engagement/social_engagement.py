@@ -26,9 +26,8 @@ def engagement_stats(df):
     """
     Average engagement overall, and broken down by post type.
     """
-    df["engagements"].mean()
-    df.groupby("post_type")["engagements"]
-
+    avg_engagements = df["engagements"].mean()
+    df.groupby("post_type")[avg_engagements]
     pass
 
 def engagement_trend_chart(df, out_path="chart_engagement_trend.png"):
