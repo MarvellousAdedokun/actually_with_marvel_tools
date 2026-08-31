@@ -48,8 +48,35 @@ def engagement_trend_chart(df, out_path="chart_engagement_trend.png"):
     plt.close()
     print(f"Saved {out_path}")
 
-        
-        
+def engagement_by_type_chart(df, out_path = "chart_engagement_by_type.png"):
+    avg_by_type = df.groupby("post_type")["engagement"].mean().sort_values()
+
+    fig, ax = plt.subplots(figsize=(10, 7), facecolor=BLACK)
+    ax.set_facecolor(BLACK)
+    ax.barh(avg_by_type.index, avg_by_type.values, color=ORANGE)
+    ax.set_title("Average engagement by post type", color=WHITE, fontsize=18, pad=20, loc="left")
+    ax.tick_params(colors=GREY, labelsize=12)
+    for spine in ["top", "right"]:
+        ax.spines[spine].set_visible(False)
+    for spine in ["left", "bottom"]:
+        ax.spines[spine].set_color("#333333")
+    for i, v in enumerate(avg_by_type.values):
+        ax.text(v + 1, i, f"{v:.0f}", color=WHITE, va="center", fontsize=12)
+
+    plt.tight_layout()
+    plt.savefig(out_path, facecolor=BLACK, dpi=200)
+    plt.close()
+    print(f"Saved {out_path}")
 
 
+if __name__ == "__main__":
+    df = load_data(CSV_PATH)
 
+    print("=== POSTING FREQUENCY ===")
+    print(posting_frequency(df))
+
+    print("\n=== ENGAGEMENT STATS ===")
+    engagement_stats(df)
+
+    engagement_trend_chart(df)
+    engagement_by_type_chart(df)
