@@ -18,7 +18,7 @@ def posting_frequency(df):
     How many posts per week/month — is posting consistent or sporadic?
     """
     post_per_week = df.groupby(pd.Grouper(key="date", freq="W")).size()
-    post_per_month = df.groupby(pd.Grouper(key="date", freq="M")).size()
+    post_per_month = df.groupby(pd.Grouper(key="date", freq="ME")).size()
 
     return post_per_month, post_per_week
 
@@ -26,9 +26,9 @@ def engagement_stats(df):
     """
     Average engagement overall, and broken down by post type.
     """
-    avg_engagements = df["engagements"].mean()
-    df.groupby("post_type")[avg_engagements]
-    pass
+    overall_avg = df["engagements"].mean()
+    by_type_avg = df.groupby("post_type")['engagements'].mean().sort_values(ascending=False)
+    return overall_avg, by_type_avg
 
 def engagement_trend_chart(df, out_path="chart_engagement_trend.png"):
     df_sorted = df.sort_values("date")
@@ -75,7 +75,9 @@ if __name__ == "__main__":
     print(posting_frequency(df))
 
     print("\n=== ENGAGEMENT STATS ===")
-    engagement_stats(df)
-
+    overall_avg, by_type_avg = engagement_stats(df)
+    print(f"Overall average engagement: {overall_avg:.1f}")
+    print("\nAverage engagement by post type:")
+    print(by_type_avg)
     engagement_trend_chart(df)
     engagement_by_type_chart(df)
