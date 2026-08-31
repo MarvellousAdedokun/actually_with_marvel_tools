@@ -10,7 +10,7 @@ GREY = "#999999"
 def load_data(csv_path):
     df = pd.read_csv(csv_path)
     df["date"] = pd.to_datetime(df['date'])
-    df['engagements'] = df['likes'] + df['date']
+    df['engagements'] = df['likes'] + df['comments']
     return df
 
 def posting_frequency(df):
