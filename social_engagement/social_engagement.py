@@ -9,7 +9,7 @@ GREY = "#999999"
 
 def load_data(csv_path):
     df = pd.read_csv(csv_path)
-    df["date"] = pd.to_datetime(df['dates'])
+    df["date"] = pd.to_datetime(df['date'])
     df['engagements'] = df['likes'] + df['date']
     return df
 
