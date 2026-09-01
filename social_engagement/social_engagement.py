@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-CSV_PATH = r"C:\Users\HP\Documents\GitHub\actually_with_marvel_tools\social_engagement\social_posts.csv"
+CSV_PATH = BASE_DIR / "social_posts.csv"
 ORANGE = "#E8630A"
 BLACK = "#0A0A0A"
 WHITE = "#FFFFFF"
@@ -13,7 +13,7 @@ GREY = "#999999"
 def load_data(csv_path):
     df = pd.read_csv(csv_path)
     df["date"] = pd.to_datetime(df['date'])
-    df['engagements'] = df['likes'] + df['comments']
+    df['engagements'] = df['likes'] + df['comments'] + df['shares'] + df['saves']
     return df
 
 def posting_frequency(df):
@@ -33,7 +33,7 @@ def engagement_stats(df):
     by_type_avg = df.groupby("post_type")['engagements'].mean().sort_values(ascending=False)
     return overall_avg, by_type_avg
 
-def engagement_trend_chart(df, out_path="chart_engagement_trend.png"):
+def engagement_trend_chart(df, out_path=BASE_DIR / "chart_engagement_trend.png"):
     df_sorted = df.sort_values("date")
     fig, ax = plt.subplots(figsize=(10, 7), facecolor=BLACK)
     ax.set_facecolor(BLACK)
@@ -50,7 +50,7 @@ def engagement_trend_chart(df, out_path="chart_engagement_trend.png"):
     plt.close()
     print(f"Saved {out_path}")
 
-def engagement_by_type_chart(df, out_path = "chart_engagement_by_type.png"):
+def engagement_by_type_chart(df, out_path = BASE_DIR / "chart_engagement_by_type.png"):
     avg_by_type = df.groupby("post_type")["engagements"].mean().sort_values()
 
     fig, ax = plt.subplots(figsize=(10, 7), facecolor=BLACK)
