@@ -1,7 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from pathlib import Path
 
-CSV_PATH = "social_posts.csv"
+BASE_DIR = Path(__file__).resolve().parent
+
+CSV_PATH = r"C:\Users\HP\Documents\GitHub\actually_with_marvel_tools\social_engagement\social_posts.csv"
 ORANGE = "#E8630A"
 BLACK = "#0A0A0A"
 WHITE = "#FFFFFF"
