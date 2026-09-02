@@ -1,0 +1,18 @@
+=== The African Braiding Bar: internal analysis ===
+Posting is inconsistent — 78 of 101 weeks had zero posts. Fix the gaps before optimizing post type: inconsistent posting resets reach every time, so even the best-performing format won't compound.
+
+Not enough posts per type yet (need 5+ each) to trust a type-vs-type comparison — flag this as a gap rather than force a conclusion.
+
+Best single post was a Video on Oct 12, 2024 with 59 engagements — worth reverse-engineering what made that one different.
+
+
+=== Braids by the Nigerian Sistas: internal analysis ===
+Posting is inconsistent — 24 of 45 weeks had zero posts. Fix the gaps before optimizing post type: inconsistent posting resets reach every time, so even the best-performing format won't compound.
+
+Among post types with enough data to trust (Picture Carousel, Video), Videos earn 1.3x the engagement of Picture Carousels — shift weight toward Videos.
+
+Best single post was a Video on Aug 30, 2026 with 177 engagements — worth reverse-engineering what made that one different.
+
+
+=== Competitive comparison ===
+Braids by the Nigerian Sistas is averaging 151% more engagement per post than The African Braiding Bar, while posting more often (0.9 vs 0.4 posts/week). That gap is the real story — it's not about posting more, it's about what's earning attention once The African Braiding Bar does post.
