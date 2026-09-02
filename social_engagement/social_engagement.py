@@ -5,7 +5,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 
 # --- Business config: fill these in ---
-CLIENT_NAME = "The African Braiding Bar"
+CLIENT_NAME = "The African Braiding Bar IG"
 CLIENT_CSV = BASE_DIR / "client_posts.csv"
 
 COMPETITOR_NAME = "Braids by the Nigerian Sistas"
