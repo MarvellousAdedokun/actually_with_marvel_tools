@@ -1,6 +1,6 @@
 # Instagram Engagement Analysis: The African Braiding Bar vs. Braids by the Nigerian Sistas
 
-**[INSERT ONE-LINE FINDING — e.g. "The African Braiding Bar is getting X% less engagement per post than its closest local competitor, and hasn't posted since April."]**
+**The African Braiding Bar is getting 151% less engagement per post than a direct local competitor — and its best-performing post on record is from October 2024.**
 
 This is a free, public breakdown of what two competing hair-braiding businesses' own public Instagram data says about their content strategy — part of an ongoing series analyzing real businesses using only data they've already made public. Full write-up and methodology below.
 
@@ -8,7 +8,7 @@ This is a free, public breakdown of what two competing hair-braiding businesses'
 
 ## The headline
 
-[PASTE the competitive recommendation paragraph from recommendation.txt here — the "X is averaging Y% more engagement than Z" line]
+Braids by the Nigerian Sistas is averaging 151% more engagement per post than The African Braiding Bar, while posting more often (0.9 vs 0.4 posts/week). That gap is the real story — it's not about posting more, it's about what's earning attention once The African Braiding Bar does post.
 
 ---
 
@@ -16,44 +16,61 @@ This is a free, public breakdown of what two competing hair-braiding businesses'
 
 ### Posting frequency vs. engagement
 
-![Client: frequency vs engagement](chart_client_frequency_vs_engagement.png)
-![Competitor: frequency vs engagement](chart_competitor_frequency_vs_engagement.png)
+![The African Braiding Bar: frequency vs engagement](chart_client_frequency_vs_engagement.png)
+![Braids by the Nigerian Sistas: frequency vs engagement](chart_competitor_frequency_vs_engagement.png)
 
-[1-2 sentences: what pattern is visible — gaps, consistency, correlation with engagement]
+The African Braiding Bar has gone quiet for extended stretches — 78 of the last 101 weeks had zero posts. Braids by the Nigerian Sistas is more active but still inconsistent (24 of 45 weeks with zero posts) — consistency is a gap for both businesses, just a much deeper one for The African Braiding Bar.
 
 ### Engagement by post type
 
-![Client: engagement by type](chart_client_engagement_by_type.png)
-![Competitor: engagement by type](chart_competitor_engagement_by_type.png)
+![The African Braiding Bar: engagement by type](chart_client_engagement_by_type.png)
+![Braids by the Nigerian Sistas: engagement by type](chart_competitor_engagement_by_type.png)
 
-[1-2 sentences: which format wins for each business, and whether that's a real signal or a mono-format artifact — check your dominant_format() caveat here]
+The African Braiding Bar doesn't have enough posts of any single type yet to say which format works best for them — that's a gap in testing, not evidence either way. Braids by the Nigerian Sistas has enough data to compare: Videos earn 1.3x the engagement of Picture Carousels.
 
 ### Head-to-head
 
 ![Business comparison](chart_business_comparison.png)
 
-[1 sentence tying it back to the headline finding]
+The African Braiding Bar's strongest post on record (59 engagements, a Video from Oct 12, 2024) doesn't come close to Braids by the Nigerian Sistas' recent best (177 engagements, Aug 30, 2026) — the gap isn't a one-off, it's sustained.
 
 ---
 
 ## Full recommendation
 
-[PASTE the full contents of recommendation.txt here — internal recommendation for each business, plus the competitive comparison]
+**The African Braiding Bar — internal analysis**
+
+Posting is inconsistent — 78 of 101 weeks had zero posts. Fix the gaps before optimizing post type: inconsistent posting resets reach every time, so even the best-performing format won't compound.
+
+Not enough posts per type yet (need 5+ each) to trust a type-vs-type comparison — flag this as a gap rather than force a conclusion.
+
+Best single post was a Video on Oct 12, 2024 with 59 engagements — worth reverse-engineering what made that one different.
+
+**Braids by the Nigerian Sistas — internal analysis**
+
+Posting is inconsistent — 24 of 45 weeks had zero posts. Fix the gaps before optimizing post type: inconsistent posting resets reach every time, so even the best-performing format won't compound.
+
+Among post types with enough data to trust (Picture Carousel, Video), Videos earn 1.3x the engagement of Picture Carousels — shift weight toward Videos.
+
+Best single post was a Video on Aug 30, 2026 with 177 engagements — worth reverse-engineering what made that one different.
+
+**Competitive comparison**
+
+Braids by the Nigerian Sistas is averaging 151% more engagement per post than The African Braiding Bar, while posting more often (0.9 vs 0.4 posts/week). That gap is the real story — it's not about posting more, it's about what's earning attention once The African Braiding Bar does post.
 
 ---
 
 ## Methodology
 
 - **Data source:** Public Instagram post data (likes, comments, shares, post type, date) — manually logged from each business's public profile. No private analytics, no scraping tools, no login access to either account.
-- **Date range:** [INSERT — e.g. "Dec 2025–Sept 2026"]
+- **Date range:** The African Braiding Bar — full logged history spans roughly 101 weeks back from today. Braids by the Nigerian Sistas — roughly 45 weeks back from today. These ranges differ because posting frequency was measured from each business's own earliest logged post through today, to capture real gaps in posting (including any recent silence) rather than cutting the window artificially short.
 - **Engagement score:** likes + comments + shares (saves excluded — not consistently visible across post types on Instagram)
-- **Sample size:** [INSERT post counts per business]
 
 ## Limitations
 
 - Engagement is a proxy for attention, not for bookings, revenue, or conversion — this data can't confirm whether either business is actually converting that attention into paying customers.
-- Where one business relies heavily on a single post format, its type-vs-type comparison reflects a lack of experimentation, not proof that the format is optimal.
-- Any type-level comparison below 5 posts per type is flagged as unreliable rather than reported as a finding.
+- The African Braiding Bar's type-vs-type comparison isn't reported because there isn't yet enough data per post type to trust it — that reflects a lack of testing, not proof that their current format is or isn't working.
+- The two businesses' data windows differ in length (see Methodology) — the "zero-week" counts reflect different total time spans and shouldn't be compared 1:1 as raw numbers, only as a share of each business's own history.
 
 ## Disclaimer
 
